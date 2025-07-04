@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tic Tac Toe</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
@@ -15,18 +16,31 @@
     </header>
 
     <div class="menu">
-      <button class="btn single" onclick="startGame('player')">SINGLE PLAYER</button>
-      <button class="btn two" onclick="startGame('two')">TWO PLAYER</button>
-      <a class="btn how-to" href="how-to-play.html">HOW TO PLAY</a>
+        <button class="btn single" onclick="startGame('player')">SINGLE PLAYER</button>
+        <button class="btn two" onclick="startGame('two')">TWO PLAYER</button>
+        <a class="btn how-to" href="how-to-play.html">HOW TO PLAY</a>
     </div>
 
     <div class="game-container">
       <div class="game hidden">
-        <div class="top-bar">
-          <span id="mode-label"></span>
-          <span id="timer"><span id="time">15</span>s</span>
-          <span id="score">Score X: <span id="scoreX">0</span> | O: <span id="scoreO">0</span></span>
-        </div>
+      <div class="top-bar">
+    <div class="info-block" id="mode-block">
+      <span class="label">Mode:</span>
+      <span id="mode-label"></span>
+    </div>
+
+    <div class="info-block" id="timer-block">
+      <span class="label">Timer:</span>
+      <span id="timer"><span id="time">15</span>s</span>
+    </div>
+
+    <div class="info-block" id="score-block">
+      <span class="label">Score:</span>
+      <span id="score">
+        X: <span id="scoreX">0</span> | O: <span id="scoreO">0</span>
+      </span>
+    </div>
+  </div>
 
         <div class="board" id="board"></div>
 
@@ -37,12 +51,14 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <footer>
-    <p>OpenDev Mada</p>
-    <img src="assets/openDevMada.jpg" alt="OpenDev Mada Logo" width="50">
-  </footer>
+      <footer class="footer">
+          <img src="assets/openDevMada.jpg" alt="OpenDev Mada Logo" width="50">
+          <p>Developed by Astna</p>
+          <p>Created on July 4, 2025</p>
+      </footer>
+
+  </div>
   
 </body>
 </html>
