@@ -1,34 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="app">
     <header>
-    <h1>Tic Tac Toe</h1>
-  </header>
+      <h1>Tic <span class="accent">Tac</span> Toe</h1>
+      <p class="subtitle">A classic game of strategy and fun!</p>
+    </header>
 
-  <main>
-    <div id="game">
-      <div class="cell" data-index="0"></div>
-      <div class="cell" data-index="1"></div>
-      <div class="cell" data-index="2"></div>
-      <div class="cell" data-index="3"></div>
-      <div class="cell" data-index="4"></div>
-      <div class="cell" data-index="5"></div>
-      <div class="cell" data-index="6"></div>
-      <div class="cell" data-index="7"></div>
-      <div class="cell" data-index="8"></div>
+    <div class="menu">
+      <button class="btn single" onclick="startGame('player')">SINGLE PLAYER</button>
+      <button class="btn two" onclick="startGame('two')">TWO PLAYER</button>
+      <a class="btn how-to" href="how-to-play.html">HOW TO PLAY</a>
     </div>
-    <div id="status">Tour du joueur : X</div>
-    <button id="restart">Rejouer</button>
-  </main>
+
+    <div class="game-container">
+      <div class="game hidden">
+        <div class="top-bar">
+          <span id="mode-label"></span>
+          <span id="timer"> Time<span id="time">15</span>s</span>
+          <span id="score">Score X: <span id="scoreX">0</span> | O: <span id="scoreO">0</span></span>
+        </div>
+
+        <div class="board" id="board"></div>
+
+        <div class="status" id="status"></div>
+        <div class="actions">
+          <button onclick="resetBoard()">Reset</button>
+          <button onclick="goToMenu()">Back Home</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <p>OpenDev Mada</p>
     <img src="assets/openDevMada.jpg" alt="OpenDev Mada Logo" width="50">
   </footer>
+  
 </body>
 </html>
