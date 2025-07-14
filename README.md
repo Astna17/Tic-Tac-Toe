@@ -57,3 +57,8 @@ Le mode **VS Bot** repose sur une **intelligence artificielle progressive** :
 ```bash
 git clone https://github.com/Astna17/Tic-Tac-Toe.git
 cd Tic Tac Toe
+
+---
+
+## Lien vers l'application déployée
+  Visitez l'application en direct : https://tic-tac-toe-ia-bot.netlify.app

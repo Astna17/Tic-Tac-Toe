@@ -5,7 +5,7 @@ let isGameActive = true;
 let mode = 'player';
 let timerInterval;
 let timeLeft = 15;
-let score = { X: 0, O: 0 };
+let score = { X: -1, O: +1 };
 
 function startGame(selectedMode) {
   document.querySelector('.menu').classList.add('hidden');
